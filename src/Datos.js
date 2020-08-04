@@ -10,7 +10,7 @@ const Datos = ({ dato }) => {
     let diff = (remainingBirth - remainingNow);
 
     return (
-        <div className="card m-3">
+        <div className="card shadow bg-info m-3">
             <div className="card-body">
                 <p>{dato.firstName}</p>
                 <p>Fecha de nacimiento: {birthDate}</p>

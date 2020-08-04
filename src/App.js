@@ -1,13 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { people } from "./people.json"
 import Listado from "./Listado";
 
 function App() {
-  console.log(people)
-
-  const obtenerJSON = () => {
-
-  }
+  const [show, setShow] = useState(false);
 
   return (
     <div className="container p-5">
@@ -15,7 +11,9 @@ function App() {
         <div className="col" style={{ width: "200px" }}>
           <button
             className="btn btn-primary"
-            onClick={obtenerJSON}
+            onClick={() => {
+              setShow(true);
+            }}
           >
             Mostrar Nombres
       </button>

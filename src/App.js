@@ -12,14 +12,16 @@ function App() {
           <button
             className="btn btn-primary"
             onClick={() => {
-              setShow(true);
+              setShow(!show);
             }}
           >
             Mostrar Nombres
       </button>
-          <Listado
-            people={people}
-          />
+          {show ?
+            <Listado
+              people={people}
+            /> : null
+          }
         </div>
       </div>
     </div>
